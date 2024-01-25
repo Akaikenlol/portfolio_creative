@@ -16,7 +16,6 @@ export async function generateMetadata(): Promise<Metadata> {
 	let page;
 	try {
 		page = await client.getSingle("homepage");
-		console.log("page", page);
 	} catch (error) {
 		console.error("Error fetching page data:", error);
 		throw error;
