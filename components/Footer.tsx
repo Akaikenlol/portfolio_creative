@@ -5,7 +5,8 @@ import { PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
 import Bounded from "@/components/Bounded";
 import { isFilled } from "@prismicio/client";
-import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { SiGmail } from "react-icons/si";
 
 export default async function Footer() {
 	const client = createClient();
@@ -16,7 +17,7 @@ export default async function Footer() {
 				<div className="name flex flex-col items-center justify-center gap-x-4 gap-y-2 sm:flex-row sm:justify-self-start">
 					<Link
 						href="/"
-						className="text-xl font-extrabold tracking-tighter text-slate-100 transition-colors duration-150 hover:text-yellow-400"
+						className="text-xl font-extrabold tracking-tighter text-slate-100 transition-colors ease-in-out duration-200 hover:text-teal-400"
 					>
 						{settings.data.name}
 					</Link>
@@ -26,7 +27,7 @@ export default async function Footer() {
 					>
 						/
 					</span>
-					<p className=" text-sm text-slate-300 ">
+					<p className=" text-sm text-slate-300 cursor-pointer">
 						© {new Date().getFullYear()} {settings.data.name}
 					</p>
 				</div>
@@ -37,7 +38,7 @@ export default async function Footer() {
 								<li>
 									<PrismicNextLink
 										className={clsx(
-											"group relative block overflow-hidden  rounded px-3 py-1 text-base font-bold text-slate-100 transition-colors duration-150 hover:hover:text-teal-400"
+											"group relative block overflow-hidden  rounded px-3 py-1 text-base font-bold text-slate-100 transition-colors duration-200 hover:hover:text-teal-400"
 										)}
 										field={link}
 									>
@@ -60,16 +61,25 @@ export default async function Footer() {
 					{isFilled.link(settings.data.github_link) && (
 						<PrismicNextLink
 							field={settings.data.github_link}
-							className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-teal-400"
+							className="p-2 text-2xl text-slate-300 transition-all duration-200 hover:scale-125 hover:text-teal-400"
 							aria-label={settings.data.name + " on GitHub"}
 						>
 							<FaGithub />
 						</PrismicNextLink>
 					)}
+					{isFilled.link(settings.data.cta_link) && (
+						<PrismicNextLink
+							field={settings.data.cta_link}
+							className="p-2 text-2xl text-slate-300 transition-all duration-200 hover:scale-125 hover:text-teal-400"
+							aria-label={settings.data.name + " on Gmail"}
+						>
+							<SiGmail />
+						</PrismicNextLink>
+					)}
 					{isFilled.link(settings.data.linkedin_link) && (
 						<PrismicNextLink
 							field={settings.data.linkedin_link}
-							className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-teal-400"
+							className="p-2 text-2xl text-slate-300 transition-all duration-200 hover:scale-125 hover:text-teal-400"
 							aria-label={settings.data.name + " on LinkedIn"}
 						>
 							<FaLinkedin />
