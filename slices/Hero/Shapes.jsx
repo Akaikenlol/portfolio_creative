@@ -65,24 +65,20 @@ function Geometries() {
 		},
 	];
 
-	function getRandomColor() {
-		return Math.floor(Math.random() * 16777215);
-	}
-
 	const materials = [
-		new THREE.MeshStandardMaterial({ color: getRandomColor(), roughness: 0.1 }),
-		new THREE.MeshStandardMaterial({ color: getRandomColor(), roughness: 0.1 }),
-		new THREE.MeshStandardMaterial({ color: getRandomColor(), roughness: 0.4 }),
-		new THREE.MeshStandardMaterial({ color: getRandomColor(), roughness: 0.1 }),
-		new THREE.MeshStandardMaterial({ color: getRandomColor(), roughness: 0.1 }),
-		new THREE.MeshStandardMaterial({ color: getRandomColor(), roughness: 0.1 }),
+		new THREE.MeshStandardMaterial({ color: 0xea7074, roughness: 0.1 }),
+		new THREE.MeshStandardMaterial({ color: 0x1a5256, roughness: 0.1 }),
+		new THREE.MeshStandardMaterial({ color: 0x015438, roughness: 0.4 }),
+		new THREE.MeshStandardMaterial({ color: 0x662853, roughness: 0.1 }),
+		new THREE.MeshStandardMaterial({ color: 0x1abc9c, roughness: 0.1 }),
+		new THREE.MeshStandardMaterial({ color: 0xffc897, roughness: 0.1 }),
 		new THREE.MeshStandardMaterial({
-			color: getRandomColor(),
+			color: 0x099280,
 			roughness: 0.1,
 			metalness: 0.5,
 		}),
 		new THREE.MeshStandardMaterial({
-			color: getRandomColor(),
+			color: 0xe8296c,
 			roughness: 0.1,
 			metalness: 0.5,
 		}),
