@@ -99,7 +99,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
 							{renderLetters(slice.primary.last_name, "last")}
 						</span>
 					</h1>
-					<span className="job-title block bg-gradient-to-t from-cyan-100 via-teal-100 to-cyan-100 bg-clip-text text-2xl font-bold uppercase tracking-[.2rem] text-transparent opacity-0 md:text-4xl ">
+					<span className="job-title block bg-gradient-to-t from-cyan-400 via-teal-400 to-cyan-400 bg-clip-text text-2xl font-bold uppercase tracking-[.2rem] text-transparent opacity-0 md:text-4xl ">
 						{slice.primary.tag_line}
 					</span>
 				</div>
