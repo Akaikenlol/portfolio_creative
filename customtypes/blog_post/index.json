@@ -19,17 +19,6 @@
         },
         "type": "UID"
       },
-      "slices": {
-        "type": "Slices",
-        "fieldset": "Slice Zone",
-        "config": {
-          "choices": {
-            "text_block": {
-              "type": "SharedSlice"
-            }
-          }
-        }
-      },
       "date": {
         "type": "Date",
         "config": {
@@ -43,6 +32,20 @@
           "label": "Hover Image",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "image_block": {
+              "type": "SharedSlice"
+            },
+            "text_block": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     },
